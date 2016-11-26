@@ -20,6 +20,8 @@ public:
 	void set_a(uint16_t a);
 	void set_b(uint16_t b);
 	void set_c(uint16_t c);
+	void set_mem_a(uint16_t ma);
+	void set_mem_b(uint16_t mb);
 	void display();
 
 private:
