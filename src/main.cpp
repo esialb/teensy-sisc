@@ -10,12 +10,14 @@
 #include <i2c_t3.h>
 #include <stdint.h>
 
-#include <t3_Adafruit_SSD1306.h>
+#include "t3_Adafruit_SSD1306.h"
 
-#include <Fonts/FreeMonoBold9pt7b.h>
+#include "CPUDisplay.h"
 
 t3_Adafruit_SSD1306 gfx0(&Wire);
 t3_Adafruit_SSD1306 gfx1(&Wire1);
+
+CPU_Display cpu_display(&gfx1);
 
 void setup() {
 	gfx0.begin();
@@ -27,18 +29,12 @@ void setup() {
 	gfx0.display();
 
 	gfx1.begin();
-	gfx1.clearDisplay();
-	gfx1.setTextColor(WHITE);
-	gfx1.setFont(&FreeMonoBold9pt7b);
-	gfx1.setCursor(0, 15);
-	gfx1.print("PC: 0x0000");
-	gfx1.setCursor(0, 31);
-	gfx1.print(" A: 0x0000");
-	gfx1.setCursor(0, 47);
-	gfx1.print(" B: 0x0000");
-	gfx1.setCursor(0, 63);
-	gfx1.print(" C: 0x0000");
-	gfx1.display();
+	cpu_display.begin();
+	cpu_display.set_pc(0);
+	cpu_display.set_a(1);
+	cpu_display.set_b(2);
+	cpu_display.set_c(3);
+	cpu_display.display();
 }
 
 void loop() {

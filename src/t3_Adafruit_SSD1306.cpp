@@ -19,7 +19,7 @@ All text above, and the splash screen below must be included in any redistributi
 #include <avr/pgmspace.h>
 #include <util/delay.h>
 #include <stdlib.h>
-#include <t3_Adafruit_SSD1306.h>
+#include "t3_Adafruit_SSD1306.h"
 
 #include "Adafruit_GFX.h"
 

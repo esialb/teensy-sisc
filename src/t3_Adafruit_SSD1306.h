@@ -16,6 +16,9 @@ BSD license, check license.txt for more information
 All text above, and the splash screen must be included in any redistribution
 *********************************************************************/
 
+#ifndef __T3_ADAFRUIT_SSD
+#define __T3_ADAFRUIT_SSD
+
 #if ARDUINO >= 100
  #include "Arduino.h"
 #else
@@ -142,3 +145,5 @@ class t3_Adafruit_SSD1306 : public Adafruit_GFX {
   volatile uint8_t *mosiport, *clkport, *csport, *dcport;
   uint8_t mosipinmask, clkpinmask, cspinmask, dcpinmask;
 };
+
+#endif
