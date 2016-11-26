@@ -25,14 +25,17 @@ CPU cpu;
 
 void init_console_oled();
 void init_cpu();
+void init_devices();
 
 
 void setup() {
 	gfx0.begin();
 	gfx1.begin();
 
-	init_cpu();
 	init_console_oled();
+
+	init_cpu();
+	init_devices();
 }
 
 void loop() {
@@ -51,4 +54,8 @@ void init_cpu() {
 
 	cpu.set_display(&cpu_display);
 	cpu.set_memory(&bus);
+}
+
+void init_devices() {
+
 }
