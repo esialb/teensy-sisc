@@ -17,9 +17,15 @@ Adafruit_SSD1306 gfx1(&Wire1);
 
 void setup() {
 	gfx0.begin();
+	gfx0.clearDisplay();
+	gfx0.setTextColor(WHITE);
+	gfx0.print("gfx0");
 	gfx0.display();
 
 	gfx1.begin();
+	gfx1.clearDisplay();
+	gfx1.setTextColor(WHITE);
+	gfx1.print("gfx1");
 	gfx1.display();
 }
 
