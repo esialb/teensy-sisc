@@ -23,23 +23,29 @@ CPU_Display cpu_display(&gfx1);
 MemoryBus bus;
 CPU cpu;
 
+void init_gfx();
 void init_console_oled();
 void init_cpu();
 void init_devices();
 
 
 void setup() {
-	gfx0.begin();
-	gfx1.begin();
-
-	init_console_oled();
+	init_gfx();
 
 	init_cpu();
+
 	init_devices();
 }
 
 void loop() {
 	cpu.tick();
+}
+
+void init_gfx() {
+	gfx0.begin();
+	gfx1.begin();
+
+	init_console_oled();
 }
 
 void init_console_oled() {
