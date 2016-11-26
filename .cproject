@@ -120,6 +120,7 @@
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoteensy/libraries/ssd1351"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoteensy/libraries/x10"/>
 									<listOptionValue builtIn="false" value="&quot;${HOME}/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/4.8.4/include&quot;"/>
 								</option>
 								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.922107295" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="F_CPU=180000000L"/>
@@ -232,6 +233,7 @@
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoteensy/libraries/ssd1351"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoteensy/libraries/x10"/>
 									<listOptionValue builtIn="false" value="&quot;${HOME}/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/4.8.4/include&quot;"/>
 								</option>
 								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1198905600" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="F_CPU=180000000L"/>
@@ -344,6 +346,7 @@
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoteensy/libraries/ssd1351"/>
 									<listOptionValue builtIn="false" value="${HOME}/.platformio/packages/framework-arduinoteensy/libraries/x10"/>
 									<listOptionValue builtIn="false" value="&quot;${HOME}/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${HOME}/.platformio/packages/toolchain-gccarmnoneeabi/lib/gcc/arm-none-eabi/4.8.4/include&quot;"/>
 								</option>
 								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.884639970" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="F_CPU=180000000L"/>

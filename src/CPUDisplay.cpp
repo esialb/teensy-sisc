@@ -49,6 +49,10 @@ void CPU_Display::set_mem_b(uint16_t mb) {
 	oled->printf("MB:0x%04X", mb);
 }
 
+void CPU_Display::clear() {
+	oled->clearDisplay();
+}
+
 void CPU_Display::display() {
 	oled->display();
 }

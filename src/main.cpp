@@ -10,36 +10,45 @@
 #include <i2c_t3.h>
 #include <stdint.h>
 
-#include "t3_Adafruit_SSD1306.h"
+#include <t3_Adafruit_SSD1306.h>
 
-#include "CPUDisplay.h"
+#include <CPUDisplay.h>
+#include <device/MemoryBus.h>
+#include <CPU.h>
 
 t3_Adafruit_SSD1306 gfx0(&Wire);
 t3_Adafruit_SSD1306 gfx1(&Wire1);
 
 CPU_Display cpu_display(&gfx1);
+MemoryBus bus;
+CPU cpu;
+
+void init_console_oled();
+void init_cpu();
+
 
 void setup() {
 	gfx0.begin();
-	gfx0.clearDisplay();
-	gfx0.setTextColor(WHITE);
-	gfx0.print("SISC VM OLED CONSOLE ");
-	gfx0.display();
-
 	gfx1.begin();
-	cpu_display.begin();
-	cpu_display.set_pc(0);
-	cpu_display.set_a(0xDEAD);
-	cpu_display.set_b(0xBEEF);
-	cpu_display.set_mem_a(0xDEAD);
-	cpu_display.set_mem_b(0xBEEF);
-	cpu_display.set_c(3);
-	cpu_display.display();
 
-	gfx0.display();
-	gfx1.display();
+	init_cpu();
+	init_console_oled();
 }
 
 void loop() {
+	cpu.tick();
+}
 
+void init_console_oled() {
+	gfx0.clearDisplay();
+	gfx0.setTextColor(WHITE);
+	gfx0.display();
+}
+
+void init_cpu() {
+	cpu_display.begin();
+	cpu_display.display();
+
+	cpu.set_display(&cpu_display);
+	cpu.set_memory(&bus);
 }
