@@ -35,6 +35,9 @@ void setup() {
 	cpu_display.set_mem_b(0xBEEF);
 	cpu_display.set_c(3);
 	cpu_display.display();
+
+	gfx0.display();
+	gfx1.display();
 }
 
 void loop() {
