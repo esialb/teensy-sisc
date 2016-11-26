@@ -24,29 +24,29 @@ void CPU_Display::begin() {
 
 void CPU_Display::set_pc(uint16_t pc) {
 	oled->setCursor(0,  7);
-	oled->printf("PC:0x%04x", pc);
+	oled->printf("PC:0x%04X", pc);
 }
 void CPU_Display::set_a(uint16_t a) {
 	oled->setCursor(0, 15);
-	oled->printf(" A:0x%04x", a);
+	oled->printf(" A:0x%04X", a);
 }
 void CPU_Display::set_b(uint16_t b) {
 	oled->setCursor(0, 23);
-	oled->printf(" B:0x%04x", b);
+	oled->printf(" B:0x%04X", b);
 }
 void CPU_Display::set_c(uint16_t c) {
 	oled->setCursor(0, 31);
-	oled->printf(" C:0x%04x", c);
+	oled->printf(" C:0x%04X", c);
 }
 
 void CPU_Display::set_mem_a(uint16_t ma) {
 	oled->setCursor(63, 15);
-	oled->printf("MA:0x%04x", ma);
+	oled->printf("MA:0x%04X", ma);
 }
 
 void CPU_Display::set_mem_b(uint16_t mb) {
 	oled->setCursor(63, 23);
-	oled->printf("MB:0x%04x", mb);
+	oled->printf("MB:0x%04X", mb);
 }
 
 void CPU_Display::display() {
