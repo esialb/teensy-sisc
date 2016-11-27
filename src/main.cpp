@@ -16,6 +16,8 @@
 #include <device/MemoryBus.h>
 #include <CPU.h>
 
+#include <device/RAM.h>
+
 t3_Adafruit_SSD1306 gfx0(&Wire);
 t3_Adafruit_SSD1306 gfx1(&Wire1);
 
@@ -63,5 +65,5 @@ void init_cpu() {
 }
 
 void init_devices() {
-
+	bus.add_device(new RAM(0, 0x8000));
 }

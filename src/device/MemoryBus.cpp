@@ -27,6 +27,7 @@ void MemoryBus::add_device(RangedMemory* device) {
 	if(devices_size)
 		memcpy(tmp, devices, devices_size * sizeof(RangedMemory*));
 	tmp[devices_size] = device;
+	devices = tmp;
 	devices_size++;
 }
 
