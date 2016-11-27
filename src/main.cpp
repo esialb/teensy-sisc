@@ -25,6 +25,7 @@ CPU_Display cpu_display(&gfx1);
 MemoryBus bus;
 CPU cpu;
 
+void init_hardware();
 void init_gfx();
 void init_console_oled();
 void init_cpu();
@@ -32,10 +33,12 @@ void init_devices();
 
 
 void setup() {
+	init_hardware();
+}
+
+void init_hardware() {
 	init_gfx();
-
 	init_cpu();
-
 	init_devices();
 }
 
